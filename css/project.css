@@ -6,6 +6,30 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+:focus-visible {
+  outline: 3px solid #1b3a8a;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.v-skip {
+  position: absolute;
+  z-index: 100;
+  left: 16px;
+  top: -60px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #1b3a8a;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.v-skip:focus {
+  top: 12px;
 }
 
 body {
@@ -37,8 +61,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid #d9e6f3;
+  box-shadow: 0 4px 18px rgba(27, 58, 138, 0.06);
 }
 
 .v-bar {
@@ -110,7 +135,12 @@ img {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.15s ease, transform 0.15s ease;
+  touch-action: manipulation;
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.v-btn:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .v-btn:hover {
@@ -390,6 +420,11 @@ img {
 .v-product-img {
   width: 72%;
   height: auto;
+  transition: transform 0.25s ease;
+}
+
+.v-product:hover .v-product-img {
+  transform: scale(1.05) rotate(-2deg);
 }
 
 .v-tag {
@@ -405,7 +440,7 @@ img {
 }
 
 .v-tag-red {
-  background: #e5483b;
+  background: #c8372b;
 }
 
 .v-product-body {
@@ -425,7 +460,7 @@ img {
 .v-product-meta {
   margin: 4px 0 10px;
   font-size: 13.5px;
-  color: #6a7a99;
+  color: #55658a;
 }
 
 .v-price {
@@ -443,7 +478,7 @@ img {
 
 .v-price-old {
   font-size: 14px;
-  color: #8896b3;
+  color: #5f6f8f;
 }
 
 .v-product-body .v-btn {
@@ -673,7 +708,7 @@ img {
 
 .v-float-b {
   right: -34px;
-  bottom: 70px;
+  bottom: -52px;
   animation-delay: -2s;
 }
 
@@ -715,7 +750,7 @@ img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: #e5483b;
+  background: #d03c30;
   color: #ffffff;
   font-family: "Bricolage Grotesque", "Inter", sans-serif;
   font-weight: 800;
@@ -946,14 +981,67 @@ img {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .v-float {
     animation: none;
+  }
+
+  .v-btn,
+  .v-product,
+  .v-product-img,
+  .v-cat {
+    transition: none;
+  }
+
+  .v-btn:hover,
+  .v-btn:active,
+  .v-product:hover,
+  .v-product:hover .v-product-img,
+  .v-cat:hover {
+    transform: none;
   }
 }
 
 @media (max-width: 960px) {
+  html {
+    scroll-padding-top: 128px;
+  }
+
+  .v-bar {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
   .v-nav {
+    order: 3;
+    width: 100%;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .v-nav::-webkit-scrollbar {
     display: none;
+  }
+
+  .v-nav-link {
+    flex: none;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 999px;
+    background: #eef6fd;
+    font-size: 14px;
+  }
+
+  .v-nav-link:hover {
+    background: #ffefc2;
+  }
+
+  .v-float-b {
+    bottom: -48px;
   }
 
   .v-hero-grid {
