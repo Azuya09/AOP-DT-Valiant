@@ -22,8 +22,9 @@
     </a>
     <nav class="v-nav" aria-label="Menu utama">
       <a class="v-nav-link" href="#beranda">Beranda</a>
-      <a class="v-nav-link" href="#keunggulan">Keunggulan</a>
+      <a class="v-nav-link" href="#kategori">Kategori</a>
       <a class="v-nav-link" href="#produk">Produk</a>
+      <a class="v-nav-link" href="#cara">Cara Belanja</a>
       <a class="v-nav-link" href="#promo">Promo</a>
     </nav>
     <a class="v-btn" href="cv1.html">Masuk</a>
@@ -32,17 +33,36 @@
 
 <main>
   <section class="v-hero" id="beranda">
+    <span class="v-blob v-blob-gold" aria-hidden="true"></span>
+    <span class="v-blob v-blob-white" aria-hidden="true"></span>
+    <span class="v-blob v-blob-sky" aria-hidden="true"></span>
+    <span class="v-ring" aria-hidden="true"></span>
     <div class="v-hero-grid">
       <div class="v-hero-text">
-        <span class="v-pill">Project Informatika Kelas XI</span>
-        <h1 class="v-hero-title">Belanja kebutuhan sekolah jadi lebih mudah.</h1>
+        <span class="v-pill"><span class="v-pill-dot"></span>Project Informatika Kelas XI</span>
+        <h1 class="v-hero-title">Belanja kebutuhan sekolah jadi <span class="v-hl">lebih mudah.</span></h1>
         <p class="v-hero-desc">VD Store menyediakan tas, botol minum, buku catatan, sepatu, dan aksesori pilihan untuk menemani hari-hari belajarmu. Masuk ke akunmu lalu mulai berbelanja.</p>
         <div class="v-hero-actions">
           <a class="v-btn v-btn-gold" href="#produk">Lihat produk</a>
           <a class="v-btn v-btn-line" href="#keunggulan">Kenapa VD Store</a>
         </div>
+        <ul class="v-stats">
+          <li class="v-stat"><strong class="v-stat-num">6+</strong><span class="v-stat-text">Produk pilihan</span></li>
+          <li class="v-stat"><strong class="v-stat-num">4,8</strong><span class="v-stat-text">Rating rata-rata</span></li>
+          <li class="v-stat"><strong class="v-stat-num">7 hari</strong><span class="v-stat-text">Garansi retur</span></li>
+        </ul>
       </div>
 
+      <div class="v-login-area">
+      <div class="v-float v-float-a" aria-hidden="true">
+        <img class="v-float-img" src="images/produk-tas.svg" alt="" width="56" height="56">
+        <span class="v-float-text"><strong class="v-float-title">Tas Ransel</strong><span class="v-float-sub">Rp189.000</span></span>
+      </div>
+      <div class="v-float v-float-b" aria-hidden="true">
+        <img class="v-float-img" src="images/produk-sepatu.svg" alt="" width="56" height="56">
+        <span class="v-float-text"><strong class="v-float-title">Baru!</strong><span class="v-float-sub">Sneakers Putih</span></span>
+      </div>
+      <span class="v-sticker" aria-hidden="true">-20%</span>
       <div class="v-login" id="masuk">
         <img class="v-login-logo" src="images/logo-sekolah.png" alt="Logo sekolah" width="96" height="96">
         <h2 class="v-login-title">Masuk ke akun Anda</h2>
@@ -55,6 +75,7 @@
           <label class="v-check"><input type="checkbox"> Ingat saya</label>
         </div>
         <a class="v-btn v-btn-full" href="cv1.html">Masuk</a>
+      </div>
       </div>
     </div>
   </section>
@@ -83,6 +104,18 @@
         </div>
       </li>
     </ul>
+  </section>
+
+  <section class="v-cats" id="kategori">
+    <div class="v-wrap">
+      <h2 class="v-heading">Belanja per kategori</h2>
+      <ul class="v-cat-list">
+        <li><a class="v-cat v-cat-sky" href="#produk"><img class="v-cat-img" src="images/produk-tas.svg" alt="" width="72" height="72"><span class="v-cat-name">Tas</span><span class="v-cat-count">12 produk</span></a></li>
+        <li><a class="v-cat v-cat-gold" href="#produk"><img class="v-cat-img" src="images/produk-buku.svg" alt="" width="72" height="72"><span class="v-cat-name">Alat Tulis</span><span class="v-cat-count">24 produk</span></a></li>
+        <li><a class="v-cat v-cat-mint" href="#produk"><img class="v-cat-img" src="images/produk-kaos.svg" alt="" width="72" height="72"><span class="v-cat-name">Pakaian</span><span class="v-cat-count">18 produk</span></a></li>
+        <li><a class="v-cat v-cat-rose" href="#produk"><img class="v-cat-img" src="images/produk-headphone.svg" alt="" width="72" height="72"><span class="v-cat-name">Aksesori</span><span class="v-cat-count">15 produk</span></a></li>
+      </ul>
+    </div>
   </section>
 
   <section class="v-shop" id="produk">
@@ -171,13 +204,28 @@
     </div>
   </section>
 
+  <section class="v-steps" id="cara">
+    <div class="v-wrap">
+      <h2 class="v-heading v-heading-center">Cara belanja di VD Store</h2>
+      <p class="v-steps-sub">Tiga langkah saja, pesananmu langsung diproses.</p>
+      <ol class="v-step-list">
+        <li class="v-step"><span class="v-step-num">1</span><h3 class="v-step-title">Masuk ke akun</h3><p class="v-step-text">Gunakan username dan password sekolahmu.</p></li>
+        <li class="v-step"><span class="v-step-num">2</span><h3 class="v-step-title">Pilih produk</h3><p class="v-step-text">Masukkan barang yang kamu butuhkan ke keranjang.</p></li>
+        <li class="v-step"><span class="v-step-num">3</span><h3 class="v-step-title">Bayar &amp; terima</h3><p class="v-step-text">Bayar dengan cara favoritmu, barang diantar ke rumah.</p></li>
+      </ol>
+    </div>
+  </section>
+
   <section class="v-promo" id="promo">
     <div class="v-promo-box">
-      <div>
+      <span class="v-promo-circle v-promo-circle-a" aria-hidden="true"></span>
+      <span class="v-promo-circle v-promo-circle-b" aria-hidden="true"></span>
+      <img class="v-promo-img" src="images/produk-botol.svg" alt="" width="140" height="140">
+      <div class="v-promo-body">
         <h2 class="v-promo-title">Diskon 20% untuk perlengkapan sekolah</h2>
         <p class="v-promo-text">Berlaku sampai akhir bulan untuk semua pelajar. Masuk dengan akun sekolahmu untuk memakai promo.</p>
       </div>
-      <a class="v-btn" href="#masuk">Masuk sekarang</a>
+      <a class="v-btn v-promo-btn" href="#masuk">Masuk sekarang</a>
     </div>
   </section>
 </main>
