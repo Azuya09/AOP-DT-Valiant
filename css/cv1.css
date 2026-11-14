@@ -1,0 +1,392 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.v-body {
+  --v-ink: #141414;
+  --v-muted: #5c5c5c;
+  --v-paper: #f4f1ea;
+  --v-accent: #ff5a2d;
+  --v-blue: #2f4cff;
+  min-height: 100vh;
+  padding: 35px 24px 70px;
+  font-family: "Figtree", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--v-ink);
+  background-color: var(--v-paper);
+  background-image: radial-gradient(rgba(20, 20, 20, 0.13) 1px, transparent 1px);
+  background-size: 22px 22px;
+  line-height: 1.5;
+}
+
+.v-page {
+  max-width: 790px;
+  margin: 0 auto;
+}
+
+.v-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1.5px solid var(--v-ink);
+  border-radius: 16px;
+  box-shadow: 10px 10px 0 var(--v-ink);
+}
+
+.v-hero {
+  display: grid;
+  grid-template-columns: 216px 1fr;
+  gap: 20px;
+  align-items: start;
+  padding: 40px 33px 44px;
+}
+
+.v-photo-wrap {
+  position: relative;
+  width: 216px;
+  transform: rotate(-2deg);
+}
+
+.v-photo-link {
+  display: block;
+  border-radius: 14px;
+  transition: transform 0.2s ease;
+}
+
+.v-photo-link:hover {
+  transform: scale(1.03) rotate(1deg);
+}
+
+.v-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1.5px solid var(--v-ink);
+  border-radius: 14px;
+  background: #e8e4da;
+}
+
+.v-badge {
+  position: absolute;
+  right: -14px;
+  bottom: 12px;
+  padding: 10px 13px;
+  border: 1.5px solid var(--v-ink);
+  border-radius: 999px;
+  background: var(--v-accent);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  transform: rotate(-4deg);
+  transition: transform 0.2s ease;
+}
+
+.v-badge:hover {
+  transform: rotate(-4deg) scale(1.08);
+}
+
+.v-eyebrow {
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--v-muted);
+}
+
+.v-name {
+  margin: 8px 0 14px;
+  font-family: "Bricolage Grotesque", "Inter", sans-serif;
+  font-weight: 800;
+  font-size: clamp(40px, 8vw, 62px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.v-mark {
+  display: inline-block;
+  margin: 0 -6px;
+  padding: 0 6px;
+  line-height: 1.12;
+  background: linear-gradient(to bottom, transparent 52%, var(--v-accent) 52%);
+}
+
+.v-lead {
+  max-width: 470px;
+  margin: 0 0 22px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--v-muted);
+}
+
+.v-contact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px 0;
+  margin: 0;
+}
+
+.v-field {
+  min-width: 0;
+}
+
+.v-field-label {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--v-muted);
+}
+
+.v-field-value {
+  min-height: 22px;
+  margin: 3px 0 0;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.v-link {
+  color: var(--v-ink);
+  text-decoration-color: var(--v-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.v-link:hover {
+  background: var(--v-accent);
+  color: #ffffff;
+}
+
+.v-band {
+  overflow: hidden;
+  background: var(--v-ink);
+  padding: 13px 0;
+}
+
+.v-track {
+  display: flex;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation: v-scroll 30s linear infinite;
+}
+
+.v-skill {
+  flex: none;
+  margin-right: 38px;
+  font-family: "Bricolage Grotesque", "Inter", sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #f4f1ea;
+  white-space: nowrap;
+}
+
+.v-skill:nth-child(even) {
+  color: var(--v-accent);
+}
+
+@keyframes v-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.v-section {
+  padding: 44px 33px 0;
+}
+
+.v-section-last {
+  padding-bottom: 44px;
+}
+
+.v-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 16px;
+  font-family: "Bricolage Grotesque", "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 23px;
+  letter-spacing: -0.02em;
+}
+
+.v-num {
+  font-family: "Figtree", "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0;
+  color: var(--v-blue);
+}
+
+.v-text {
+  max-width: 540px;
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.v-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.v-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 68px;
+  padding: 14px 16px;
+  border: 1px solid var(--v-ink);
+  border-radius: 12px;
+}
+
+.v-fact-label {
+  font-size: 11.5px;
+  color: var(--v-muted);
+}
+
+.v-fact-value {
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.v-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.v-item {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 16px;
+  padding: 16px 18px;
+  border: 1px solid var(--v-ink);
+  border-radius: 12px;
+}
+
+.v-year {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--v-blue);
+  padding-top: 2px;
+}
+
+.v-item-title {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.v-item-text {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--v-muted);
+}
+
+.v-project {
+  display: grid;
+  gap: 4px;
+  padding: 16px 18px;
+  border: 1px solid var(--v-ink);
+  border-radius: 12px;
+  color: var(--v-ink);
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.v-project:hover {
+  background: var(--v-accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.v-project-label {
+  font-size: 11.5px;
+  opacity: 0.7;
+}
+
+.v-project-name {
+  font-size: 15px;
+}
+
+.v-project-go {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.v-hint {
+  margin: 18px 0 0;
+  font-size: 12.5px;
+  color: var(--v-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .v-body {
+    padding: 20px 14px 50px;
+  }
+
+  .v-card {
+    box-shadow: 6px 6px 0 var(--v-ink);
+  }
+
+  .v-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 30px 22px 34px;
+  }
+
+  .v-photo-wrap {
+    width: 200px;
+  }
+
+  .v-contact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .v-section {
+    padding: 36px 22px 0;
+  }
+
+  .v-section-last {
+    padding-bottom: 36px;
+  }
+
+  .v-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .v-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

@@ -1,0 +1,392 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.d-body {
+  --d-ink: #141414;
+  --d-muted: #5c5c5c;
+  --d-paper: #f4f1ea;
+  --d-accent: #ff5c8a;
+  --d-blue: #2f4cff;
+  min-height: 100vh;
+  padding: 35px 24px 70px;
+  font-family: "Figtree", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--d-ink);
+  background-color: var(--d-paper);
+  background-image: radial-gradient(rgba(20, 20, 20, 0.13) 1px, transparent 1px);
+  background-size: 22px 22px;
+  line-height: 1.5;
+}
+
+.d-page {
+  max-width: 790px;
+  margin: 0 auto;
+}
+
+.d-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1.5px solid var(--d-ink);
+  border-radius: 16px;
+  box-shadow: 10px 10px 0 var(--d-ink);
+}
+
+.d-hero {
+  display: grid;
+  grid-template-columns: 216px 1fr;
+  gap: 20px;
+  align-items: start;
+  padding: 40px 33px 44px;
+}
+
+.d-photo-wrap {
+  position: relative;
+  width: 216px;
+  transform: rotate(-2deg);
+}
+
+.d-photo-link {
+  display: block;
+  border-radius: 14px;
+  transition: transform 0.2s ease;
+}
+
+.d-photo-link:hover {
+  transform: scale(1.03) rotate(1deg);
+}
+
+.d-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1.5px solid var(--d-ink);
+  border-radius: 14px;
+  background: #e8e4da;
+}
+
+.d-badge {
+  position: absolute;
+  right: -14px;
+  bottom: 12px;
+  padding: 10px 13px;
+  border: 1.5px solid var(--d-ink);
+  border-radius: 999px;
+  background: var(--d-accent);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  transform: rotate(-4deg);
+  transition: transform 0.2s ease;
+}
+
+.d-badge:hover {
+  transform: rotate(-4deg) scale(1.08);
+}
+
+.d-eyebrow {
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--d-muted);
+}
+
+.d-name {
+  margin: 8px 0 14px;
+  font-family: "Bricolage Grotesque", "Inter", sans-serif;
+  font-weight: 800;
+  font-size: clamp(40px, 8vw, 62px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.d-mark {
+  display: inline-block;
+  margin: 0 -6px;
+  padding: 0 6px;
+  line-height: 1.12;
+  background: linear-gradient(to bottom, transparent 52%, var(--d-accent) 52%);
+}
+
+.d-lead {
+  max-width: 470px;
+  margin: 0 0 22px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--d-muted);
+}
+
+.d-contact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px 0;
+  margin: 0;
+}
+
+.d-field {
+  min-width: 0;
+}
+
+.d-field-label {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--d-muted);
+}
+
+.d-field-value {
+  min-height: 22px;
+  margin: 3px 0 0;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.d-link {
+  color: var(--d-ink);
+  text-decoration-color: var(--d-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.d-link:hover {
+  background: var(--d-accent);
+  color: #ffffff;
+}
+
+.d-band {
+  overflow: hidden;
+  background: var(--d-ink);
+  padding: 13px 0;
+}
+
+.d-track {
+  display: flex;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation: d-scroll 30s linear infinite;
+}
+
+.d-skill {
+  flex: none;
+  margin-right: 38px;
+  font-family: "Bricolage Grotesque", "Inter", sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #f4f1ea;
+  white-space: nowrap;
+}
+
+.d-skill:nth-child(even) {
+  color: var(--d-accent);
+}
+
+@keyframes d-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.d-section {
+  padding: 44px 33px 0;
+}
+
+.d-section-last {
+  padding-bottom: 44px;
+}
+
+.d-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 16px;
+  font-family: "Bricolage Grotesque", "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 23px;
+  letter-spacing: -0.02em;
+}
+
+.d-num {
+  font-family: "Figtree", "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0;
+  color: var(--d-blue);
+}
+
+.d-text {
+  max-width: 540px;
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.d-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.d-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 68px;
+  padding: 14px 16px;
+  border: 1px solid var(--d-ink);
+  border-radius: 12px;
+}
+
+.d-fact-label {
+  font-size: 11.5px;
+  color: var(--d-muted);
+}
+
+.d-fact-value {
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.d-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.d-item {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 16px;
+  padding: 16px 18px;
+  border: 1px solid var(--d-ink);
+  border-radius: 12px;
+}
+
+.d-year {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--d-blue);
+  padding-top: 2px;
+}
+
+.d-item-title {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.d-item-text {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--d-muted);
+}
+
+.d-project {
+  display: grid;
+  gap: 4px;
+  padding: 16px 18px;
+  border: 1px solid var(--d-ink);
+  border-radius: 12px;
+  color: var(--d-ink);
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.d-project:hover {
+  background: var(--d-accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.d-project-label {
+  font-size: 11.5px;
+  opacity: 0.7;
+}
+
+.d-project-name {
+  font-size: 15px;
+}
+
+.d-project-go {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.d-hint {
+  margin: 18px 0 0;
+  font-size: 12.5px;
+  color: var(--d-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .d-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .d-body {
+    padding: 20px 14px 50px;
+  }
+
+  .d-card {
+    box-shadow: 6px 6px 0 var(--d-ink);
+  }
+
+  .d-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 30px 22px 34px;
+  }
+
+  .d-photo-wrap {
+    width: 200px;
+  }
+
+  .d-contact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .d-section {
+    padding: 36px 22px 0;
+  }
+
+  .d-section-last {
+    padding-bottom: 36px;
+  }
+
+  .d-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .d-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
